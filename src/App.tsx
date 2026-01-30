@@ -1,10 +1,10 @@
 import "./App.css";
-import NavigationMiniDrawer from "./ui/components/navigation/NavigationMiniDrawer";
+import NavigationDrawer from "./ui/components/navigation/NavigationDrawer";
 
 function App() {
   return (
     <>
-      <NavigationMiniDrawer />
+      <NavigationDrawer />
     </>
   );
 }
