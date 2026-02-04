@@ -5,8 +5,10 @@
   "type": "module",
   "proxy": "http://localhost:4000",
   "scripts": {
-    "start": "npm run dev",
-    "dev": "vite",
+    "dev": "react-router dev",
+    "typecheck": "react-router typegen && tsc",
+    "start:api": "npm run dev --prefix ../alma-esport-api",
+    "start:dev": "concurrently \"npm run start:api\" \"npm run dev\"",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -17,15 +19,19 @@
     "@fontsource/roboto": "^5.2.9",
     "@mui/icons-material": "^7.3.7",
     "@mui/material": "^7.3.7",
+    "@react-router/node": "^7.13.0",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "isbot": "^5"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
+    "@react-router/dev": "^7.13.0",
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react-swc": "^4.2.2",
+    "concurrently": "^9.2.1",
     "eslint": "^9.39.1",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
