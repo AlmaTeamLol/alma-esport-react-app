@@ -71,7 +71,7 @@ export default function NavigationLayout() {
             zIndex: 1000,
           }}
         >
-          <Fab color="primary" aria-label="add">
+          <Fab color="secondary" aria-label="add">
             <AddIcon />
           </Fab>
         </Box>

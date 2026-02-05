@@ -1,6 +1,12 @@
 /* MUI Components */
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import { APP_BAR_HEIGHT, PAGE_MARGIN } from "../constants";
+
+/* Table */
+import Table from "../components/Table/Table";
+
+/* Table Data */
+import { memberColumns, memberRows } from "../components/Table/Table.data";
 
 /* Member Route */
 export default function Member() {
@@ -14,9 +20,7 @@ export default function Member() {
         justifyContent: "center",
       }}
     >
-      <Typography variant="h2" align="center">
-        MEMBER
-      </Typography>
+      <Table columns={memberColumns} rows={memberRows} />
     </Box>
   );
 }
