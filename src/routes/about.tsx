@@ -1,6 +1,11 @@
 /* MUI Components */
 import { Box, Typography } from "@mui/material";
-import { APP_BAR_HEIGHT, PAGE_MARGIN } from "../constants";
+
+/* Constants */
+import {
+  APP_BAR_HEIGHT,
+  PAGE_MARGIN,
+} from "@/utils/constants/navigation-constants";
 
 /* About Route */
 export default function About() {

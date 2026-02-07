@@ -1,24 +1,24 @@
-import React from "react";
+import * as React from "react";
 
 import {
   Paper,
-  TableRow,
-  TableHead,
   Table as MuiTable,
-  TableCell,
-  TableBody,
   TableContainer,
   TablePagination,
 } from "@mui/material";
 
-import type { ITableRow, ITableColumn } from "./Table.types";
+import TableHead from "./TableHead";
+import TableBody from "./TableBody";
 
-interface ITableProps {
-  columns: ITableColumn[];
-  rows: ITableRow[];
+import type { ITableColumn } from "./Table.types";
+
+/* Table */
+interface ITableProps<T> {
+  columns: Array<ITableColumn<T>>;
+  data?: T[];
 }
 
-export default function Table({ columns, rows }: ITableProps) {
+export default function Table<T>({ columns, data }: ITableProps<T>) {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
@@ -27,7 +27,7 @@ export default function Table({ columns, rows }: ITableProps) {
   };
 
   const handleChangeRowsPerPage = (
-    event: React.ChangeEvent<HTMLInputElement>
+    event: React.ChangeEvent<HTMLInputElement>,
   ) => {
     setRowsPerPage(+event.target.value);
     setPage(0);
@@ -37,55 +37,19 @@ export default function Table({ columns, rows }: ITableProps) {
     <Paper sx={{ width: "100%", overflow: "hidden" }}>
       <TableContainer sx={{ maxHeight: 440 }}>
         <MuiTable stickyHeader aria-label="sticky table">
-          <TableHead>
-            <TableRow>
-              {columns.map((column) => (
-                <TableCell
-                  key={column.id}
-                  align={column.align}
-                  style={{ minWidth: column.minWidth }}
-                >
-                  {column.label}
-                </TableCell>
-              ))}
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {rows
-              .slice(
-                page * rowsPerPage,
-                rowsPerPage > rows.length
-                  ? rows.length
-                  : page * rowsPerPage + rowsPerPage
-              )
-              .map((row) => {
-                return (
-                  <TableRow
-                    hover
-                    role="checkbox"
-                    tabIndex={-1}
-                    key={row.name as string}
-                  >
-                    {columns.map((column) => {
-                      const value = row[column.id];
-                      return (
-                        <TableCell key={column.id} align={column.align}>
-                          {column.format && typeof value === "number"
-                            ? column.format(value)
-                            : value}
-                        </TableCell>
-                      );
-                    })}
-                  </TableRow>
-                );
-              })}
-          </TableBody>
+          <TableHead columns={columns} />
+          <TableBody
+            columns={columns}
+            data={data}
+            page={page}
+            rowsPerPage={rowsPerPage}
+          />
         </MuiTable>
       </TableContainer>
       <TablePagination
         rowsPerPageOptions={[10, 25, 100]}
         component="div"
-        count={rows.length}
+        count={data?.length ?? 0}
         rowsPerPage={rowsPerPage}
         page={page}
         onPageChange={handleChangePage}

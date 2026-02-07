@@ -1,6 +1,11 @@
 /* MUI Components */
 import { Box, Typography } from "@mui/material";
-import { APP_BAR_HEIGHT, PAGE_MARGIN } from "../constants";
+
+/* Constants */
+import {
+  APP_BAR_HEIGHT,
+  PAGE_MARGIN,
+} from "@/utils/constants/navigation-constants";
 
 /* Tierlist Route */
 export default function Tierlist() {

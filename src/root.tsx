@@ -8,21 +8,7 @@ import { ThemeProvider } from "@mui/material/styles";
 /* Theme */
 import { theme } from "./theme";
 
-export function links() {
-  return [
-    { rel: "preconnect", href: "https://fonts.googleapis.com" },
-    {
-      rel: "preconnect",
-      href: "https://fonts.gstatic.com",
-      crossorigin: "anonymous",
-    },
-    {
-      rel: "stylesheet",
-      href: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap",
-    },
-    { rel: "stylesheet", href: "./index.css" },
-  ];
-}
+export { links } from "./root.links";
 
 /* Layout */
 export function Layout({ children }: { children: React.ReactNode }) {

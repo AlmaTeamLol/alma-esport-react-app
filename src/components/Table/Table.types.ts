@@ -1,12 +1,6 @@
-export interface ITableColumn {
-    id: string;
-    label: string;
-    minWidth?: number;
-    align?: 'center';
-    format?: (value: number) => string;
-}
-
-export interface ITableRow {
-    [key: string]: string | number | boolean;
-    id: number;
+export interface ITableColumn<T> {
+    key: keyof T;
+    title: string | React.ReactElement;
+    align?: "left" | "center" | "right";
+    render?: (column: ITableColumn<T>, row: T) => React.ReactElement;
 }

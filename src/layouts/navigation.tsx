@@ -10,10 +10,14 @@ import InfoIcon from "@mui/icons-material/Info";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
 import AddIcon from "@mui/icons-material/Add";
 
-import Navigation from "../components/Navigation/Navigation";
-import type { NavigationItem } from "../components/Navigation/Navigation.types";
+import Navigation from "@components/Navigation/Navigation";
+import type { NavigationItem } from "@components/Navigation/Navigation.types";
 
-import { DRAWER_WIDTH, APP_BAR_HEIGHT, PAGE_MARGIN } from "../constants";
+import {
+  DRAWER_WIDTH,
+  APP_BAR_HEIGHT,
+  PAGE_MARGIN,
+} from "@/utils/constants/navigation-constants";
 
 /* Navigation Layout */
 export default function NavigationLayout() {

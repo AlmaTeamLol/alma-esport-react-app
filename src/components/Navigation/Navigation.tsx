@@ -18,7 +18,7 @@ import { NavLink } from "react-router";
 import type { NavigationItem } from "./Navigation.types";
 
 /* Constants */
-import { DRAWER_WIDTH } from "../../constants";
+import { DRAWER_WIDTH } from "@/utils/constants/navigation-constants";
 
 interface NavigationProps {
   title: string;
