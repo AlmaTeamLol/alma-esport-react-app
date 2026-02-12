@@ -2,7 +2,7 @@ import * as z from "zod";
 
 const laneSchema = z.enum(['Top', 'Jungle', 'Mid', 'Adc', 'Support']);
 
-const riotIdRegex = /^(\?'id'[a-zA-Z0-9\s]{3, 16})#(\?'tag'[a-zA-Z0-9]{3, 5})$/;
+const riotIdRegex = /[\p{L}\p{M}\s-]{3,16}#[a-zA-Z0-9]{3,5}/gu;
 const riodIdSchema = z.string().regex(riotIdRegex);
 
 const roleSchema = z.enum(['Capitaine', 'Coach', 'Joueur']);

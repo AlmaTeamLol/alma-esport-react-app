@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Julo",
       "riotId": "Lil skinny#5814",
-      "role": "Joueur",
+      "role": ["Capitaine", "Joueur"],
       "lane": "Mid",
       "status": "Lock",
       "team": "Équipe 1"
@@ -13,7 +13,7 @@
       "id": 2,
       "name": "Slayer",
       "riotId": "René la castagne#BWD",
-      "role": "Joueur",
+      "role": ["Joueur"],
       "lane": "Top",
       "status": "Lock",
       "team": "Équipe 1"
@@ -22,7 +22,7 @@
       "id": 3,
       "name": "Mao",
       "riotId": "Mao#ALMAB",
-      "role": "Joueur",
+      "role": ["Joueur"],
       "lane": "Adc",
       "status": "Lock",
       "team": "Équipe 1"
@@ -31,7 +31,7 @@
       "id": 4,
       "name": "Gnomnom",
       "riotId": "Guigz to GM#Gnom",
-      "role": "Joueur",
+      "role": ["Joueur"],
       "lane": "Jungle",
       "status": "Lock",
       "team": "Équipe 1"
@@ -40,7 +40,7 @@
       "id": 5,
       "name": "Jay",
       "riotId": "Ëdelgard#SUPP",
-      "role": "Coach",
+      "role": ["Coach"],
       "lane": "Support",
       "status": "Lock",
       "team": "Équipe 1"
@@ -49,7 +49,7 @@
       "id": 6,
       "name": "Kryder",
       "riotId": "Kryder#777",
-      "role": "Coach",
+      "role": ["Coach"],
       "lane": "Adc",
       "status": "Lock",
       "team": "Équipe 1"
