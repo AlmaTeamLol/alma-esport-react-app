@@ -1,11 +1,18 @@
 /* MUI Components */
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
+
+/* Components */
+import Table from "@components/Table/Table";
 
 /* Constants */
 import {
   APP_BAR_HEIGHT,
   PAGE_MARGIN,
 } from "@/utils/constants/navigation-constants";
+
+/* Data */
+import getTeams from "@/data/get-teams";
+import { teamColumns } from "./team.columns";
 
 /* Team Route */
 export default function Team() {
@@ -19,9 +26,7 @@ export default function Team() {
         justifyContent: "center",
       }}
     >
-      <Typography variant="h2" align="center">
-        TEAM
-      </Typography>
+      <Table columns={teamColumns} data={getTeams()} />
     </Box>
   );
 }

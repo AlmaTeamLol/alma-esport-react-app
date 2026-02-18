@@ -1,14 +1,28 @@
 /* React Router */
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router";
 
-/* CSS */
-import "./index.css";
+import type { Route } from "./+types/root";
+
 import { ThemeProvider } from "@mui/material/styles";
 
 /* Theme */
 import { theme } from "./theme";
 
-export { links } from "./root.links";
+import "./index.css";
+
+export const links: Route.LinksFunction = () => [
+  { rel: "icon", href: "@images/logo.png", type: "image/png" },
+  { rel: "preconnect", href: "https://fonts.googleapis.com" },
+  {
+    rel: "preconnect",
+    href: "https://fonts.gstatic.com",
+    crossOrigin: "anonymous",
+  },
+  {
+    rel: "stylesheet",
+    href: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap",
+  },
+];
 
 /* Layout */
 export function Layout({ children }: { children: React.ReactNode }) {

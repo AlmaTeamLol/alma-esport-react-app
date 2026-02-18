@@ -13,6 +13,7 @@
     "paths": {
       "@/*": ["./src/*"],
       "@assets/*": ["./src/assets/*"],
+      "@images": ["src/assets/images/*"],
       "@components/*": ["./src/components/*"],
       "@constants": ["src/utils/constants/navigation-constants.ts"],
       "@data/*": ["./src/data/*"],

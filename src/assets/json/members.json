@@ -53,6 +53,42 @@
       "lane": "Adc",
       "status": "Lock",
       "team": "Équipe 1"
+    },
+    {
+      "id": 7,
+      "name": "TaiiKo",
+      "riotId": "TaiiKo#yasuo",
+      "role": ["Capitaine", "Joueur"],
+      "lane": "Top",
+      "status": "Lock",
+      "team": "Équipe 2"
+    },
+    {
+      "id": 8,
+      "name": "Supremmm",
+      "riotId": "BWD Supremmm#Oner",
+      "role": ["Joueur"],
+      "lane": "Jungle",
+      "status": "Lock",
+      "team": "Équipe 2"
+    },
+    {
+      "id": 9,
+      "name": "Atoll",
+      "riotId": "Atoll6#KALI",
+      "role": ["Joueur"],
+      "lane": "Mid",
+      "status": "Lock",
+      "team": "Équipe 2"
+    },
+    {
+      "id": 10,
+      "name": "Alkione",
+      "riotId": "Fenrir#1502",
+      "role": ["Joueur"],
+      "lane": "Adc",
+      "status": "Lock",
+      "team": "Équipe 2"
     }
   ]
 }
