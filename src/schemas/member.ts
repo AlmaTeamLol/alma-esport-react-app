@@ -1,4 +1,5 @@
 import * as z from "zod";
+import { teamSchema } from "./team";
 
 const laneSchema = z.enum(['Top', 'Jungle', 'Mid', 'Adc', 'Support']);
 
@@ -15,7 +16,7 @@ const memberSchema = z.object({
     role: z.array(roleSchema).min(1),
     lane: laneSchema,
     status: statusSchema,
-    team: z.string(),
+    get team() { return teamSchema; },
 });
 
 export { memberSchema, laneSchema, riodIdSchema, roleSchema, statusSchema };

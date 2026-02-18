@@ -30,7 +30,7 @@ export default defineConfig([
     rules: {
       "react-refresh/only-export-components": [
         "error",
-        { allowExportNames: ["links", "loader", "clientLoader"] },
+        { allowExportNames: ["links", "loader", "clientLoader", "meta"] },
       ],
       "import-zod/prefer-zod-namespace": "error",
     },
