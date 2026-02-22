@@ -1,7 +1,23 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
+  "extends": "@tsconfig/node22/tsconfig.json",
+  "compilerOptions": {
+    "paths": {
+      "@backend/*": ["./backend/src/*"],
+      "@frontend/*": ["./frontend/src/*"],
+      "@packages/*": ["./packages/*"],
+      "@core/*": ["./packages/core/*"],
+      "@model/*": ["./packages/core/model/src/*"],
+      "@database/*": ["./packages/core/database/src/*"],
+      "@services/*": ["./packages/core/services/src/*"]
+    }
+  },
+  "include": ["backend/**/*.ts", "frontend/**/*.ts", "packages/**/*.ts"],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "backend/dist",
+    "frontend/dist",
+    "packages/**/dist",
+    "**/*.test.ts"
   ]
 }

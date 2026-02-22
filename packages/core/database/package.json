@@ -1,0 +1,13 @@
+{
+  "name": "alma-esport-core-database",
+  "version": "1.0.0",
+  "description": "A NodeJS / Express api project for ALMA Esports management.",
+  "license": "ISC",
+  "author": "iMean",
+  "type": "module",
+  "baseUrl": "./src",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
