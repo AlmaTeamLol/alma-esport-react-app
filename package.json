@@ -6,8 +6,8 @@
     "packages/**"
   ],
   "scripts": {
-    "front:dev": "cd frontend && tsx --watch --env-file .env.development src/index.ts",
-    "front:build": "cd frontend && tsc ./src/app.ts",
+    "front:dev": "cd frontend && npm run dev",
+    "front:build": "cd frontend && npm run build",
     "front:start": "cd frontend && node ./dist/app.js",
     "back:dev": "cd backend && tsx --watch --env-file .env.development src/index.ts",
     "back:build": "cd backend && tsc ./src/index.ts",
